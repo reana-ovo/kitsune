@@ -1,0 +1,7 @@
+# Local bindings and personal workspaces are not reusable source.
+skills/*/local/
+.personal/
+.tmp/
+
+# Historical source archives remain local.
+/archive/
