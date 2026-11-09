@@ -9,6 +9,7 @@
 - [grilling](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md)：按决策依赖推进，事实先调查，给出建议。
 - [grill-with-docs](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/grill-with-docs/SKILL.md)：访谈过程中保存结果。其术语建模和 ADR 产物没有继承为个人工作流要求。
 - [Agent Skills 编写建议](https://agentskills.io/skill-creation/best-practices)：真实任务、按需加载、适量细节和执行反馈。
+- [HSE procedures](https://www.hse.gov.uk/humanfactors/topics/procedures.htm)：借鉴与实际执行者走查任务、讨论如何完成，以及按任务和使用者决定说明细度的方法。其原始用途是人因工程和操作流程，不是个人 AI 工作流评测；本项目的六维访谈框架和质量对照流程是设计选择，尚未验证其访谈效果。
 
 没有继承这些项目的默认多代理、固定模型、工作区路径、worktree、提交、PR 或外部跟踪操作。它们的流程定义不是 kitsune 的效果验证。
 

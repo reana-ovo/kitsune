@@ -4,7 +4,7 @@ This file is for configuration and maintenance, not startup instructions. Candid
 
 {{evidence_records}}
 
-Each record should identify the requirement or candidate, its narrow source pointer, the user's statement or a short summary, scope, confirmation status, and any superseded statement. Record sampling limits. Do not retain raw conversations, credentials, unrelated personal information, or project rules as personal defaults.
+Each record should identify the requirement, method, quality criterion, or candidate; its narrow source pointer; the user's statement or a short summary; scope; confirmation or explicit delegation; and any superseded statement. Distinguish user evidence from agent-proposed methods and hypothetical contrasts. For multiple sources, retain their roles, reading boundaries, and sampling limits without treating the first or most frequent pattern as authoritative. Do not retain raw conversations, credentials, unrelated personal information, or project rules as personal defaults.
 
 {{coverage_and_deferrals}}
 

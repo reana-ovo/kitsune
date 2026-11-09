@@ -92,7 +92,7 @@ const placeholders = new Set(files(templateRoot).flatMap(file => [...read(file).
 equal([...placeholders].sort(), [
   'workflow_scope', 'reply_language', 'method_index', 'confirmed_preferences', 'selected_skill_inventory',
   'runtime_examples', 'evidence_records', 'coverage_and_deferrals', 'method_name', 'applicability',
-  'inputs_and_result', 'method_steps', 'verification_and_stop_conditions',
+  'inputs_and_result', 'method_steps', 'quality_criteria', 'verification_and_stop_conditions',
 ].sort(), 'Template field contract changed');
 for (const file of files(sampleRoot)) check(!/\{\{[a-z_]+\}\}/i.test(read(file)), `Unresolved sample template: ${file}`);
 for (const name of ['maintenance.md', 'authoring.md']) {
@@ -115,6 +115,28 @@ equal(overlapSection(read(path.join(sampleRoot, 'README.md'))), templateOverlap,
 check(read(path.join(templateRoot, 'authoring.md')).includes('## Scope, exceptions, and local precedence'), 'Authoring guide lacks scoped precedence guidance');
 check(read(path.join(root, 'skills/kitsune-setup/references/interview.md')).includes('## Investigate relevant overlaps'), 'Interview lacks targeted overlap questions');
 check(read(path.join(root, 'skills/kitsune-setup/references/generation.md')).includes('## Generate scoped requirements and relationships'), 'Generation does not include confirmed relationships');
+const setupEntry = read(path.join(root, 'skills/kitsune-setup/SKILL.md'));
+const interview = read(path.join(root, 'skills/kitsune-setup/references/interview.md'));
+const framework = read(path.join(root, 'skills/kitsune-setup/references/framework.md'));
+const generation = read(path.join(root, 'skills/kitsune-setup/references/generation.md'));
+check(setupEntry.includes('](references/framework.md)'), 'Setup does not load the interview framework');
+check(interview.includes('## Register scope and sources'), 'Interview lacks source registration');
+for (const dimension of ['Goal and output', 'Execution method', 'Quality standard', 'Verification evidence', 'Tradeoffs and exceptions', 'Collaboration and delivery']) {
+  check(framework.includes(`| ${dimension} |`), `Framework lacks dimension: ${dimension}`);
+}
+for (const fragment of ['walk-through-how-the-work-is-done', 'calibrate-quality-with-contrasts', 'decide-what-is-covered']) {
+  check(interview.includes(`](framework.md#${fragment})`), `Interview does not use framework step: ${fragment}`);
+}
+check(generation.includes('## Generate methods and quality criteria'), 'Generation lacks method and quality mapping');
+check(generation.includes('](framework.md#decide-what-is-covered)'), 'Generation lacks the interview completion boundary');
+check(authoringGuide.includes('## Express methods and quality'), 'Authoring lacks method and quality guidance');
+const methodTemplate = read(path.join(templateRoot, 'methods/method.md'));
+check(methodTemplate.includes('## Quality criteria\n\n{{quality_criteria}}'), 'Method template lacks an explicit quality field');
+const sampleMethod = read(path.join(sampleRoot, 'methods/compare.md'));
+for (const heading of ['When to use', 'Inputs and expected result', 'Procedure', 'Quality criteria', 'Verification and stopping']) {
+  const body = sampleMethod.split(`## ${heading}\n`)[1]?.split('\n## ')[0];
+  check(body?.trim(), `Example method lacks content for: ${heading}`);
+}
 throws(() => readCore(templateRoot), /Unresolved template/, 'Raw templates must not become startup content');
 
 const archiveRoot = path.join(root, 'archive');

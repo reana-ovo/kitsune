@@ -24,6 +24,14 @@ Keep active instructions short. Provenance, drafts, and unresolved alternatives 
 
 For revisions, use maintenance's [change selection](maintenance.md#choose-the-smallest-change) and [before-and-after checks](maintenance.md#plan-before-and-after-checks). Edit the affected content rather than regenerating the whole profile. A merge must preserve distinct conditions, exceptions, terminology, and obligations; shorter text is not sufficient evidence of improvement. Retire superseded guidance instead of leaving two active versions. When moving detail out of the core, retain its applicability and reading path; do not hide an authorization boundary because it is rarely used.
 
+## Express methods and quality
+
+For important repeatable work, distinguish when to act from how to do the work. State the intended result, useful inputs, consequential steps and their basis, judgment points, and signals for adapting the approach. Describe how to identify a relevant precedent rather than only saying to follow existing patterns. Keep ordinary implementation details delegated where the user has already delegated them.
+
+Translate quality terms into properties that can be inspected in the result, with a reason they matter. Then state how to obtain verification evidence and its limits. A generic demand for high quality, passing a basic check, or choosing a decision branch does not establish an adequate method.
+
+Use reviewed examples or credible contrasts to preserve distinctions that are hard to state abstractly. Do not treat every detail of an accepted artifact, the first reference project, or an agent-proposed method as a confirmed preference. Leave material gaps visible or explicitly deferred rather than inventing content to fill a template. Several tasks may share a method, and simple requirements need no separate method file.
+
 ## Scope, exceptions, and local precedence
 
 Multiple applicable requirements do not necessarily conflict. Check whether they can be satisfied together or apply to different situations before assigning precedence.
@@ -59,5 +67,7 @@ More examples are not automatically better. After a failure, first check whether
 - Are the user's terminology and desired reply language preserved?
 - Does the chosen operation fix the diagnosed cause without unnecessary new guidance?
 - Which previous obligations must still pass, and what behavior remains unverified?
+- For important tasks, does the content explain how to work and what makes a good result, not just when to act?
+- Do examples establish a meaningful quality distinction, and are agent proposals separate from confirmed or delegated judgments?
 
 Do not claim compliance from wording alone. File checks and actual behavior checks are separate.

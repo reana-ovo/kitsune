@@ -12,6 +12,10 @@
 
 {{method_steps}}
 
+## Quality criteria
+
+{{quality_criteria}}
+
 ## Verification and stopping
 
 {{verification_and_stop_conditions}}

@@ -49,7 +49,9 @@ In Claude Code with slash-command skill support, enter:
 
 On other hosts, use their supported manual skill invocation mechanism.
 
-Provide a reference work directory and reading boundaries. If you have no shareable directory, use task descriptions or selected excerpts instead. The agent explores your work scenarios, discusses preferences and trade-offs, checks for omissions, and presents the proposed content and optional skills for review.
+Describe the work you want to cover and provide zero, one, or several reference projects, artifacts, or excerpts, with a reading boundary for each. You can add sources during the interview. If you have no shareable material, start with task descriptions.
+
+After a bounded review, the agent checks coverage across goals and outputs, execution methods, quality standards, verification evidence, tradeoffs and exceptions, and collaboration. Reference projects do not define the whole scope. Important scenarios become concrete tasks, with method drafts and output contrasts to discuss what doing the work well means. The agent checks for omissions and presents the proposed content and optional skills for review, without asking you to approve every routine judgment you have already delegated.
 
 Once confirmed, personal files are saved to `~/.kitsune/workflow/` by default. An explicitly supplied path or existing binding takes precedence. A reference project's rules do not automatically become your cross-project personal preferences.
 

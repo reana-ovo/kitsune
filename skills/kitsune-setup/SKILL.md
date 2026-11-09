@@ -12,16 +12,16 @@ The result is a user-owned directory of ordinary files, not a new agent runtime 
 
 ## Begin with the user's work
 
-1. Read [the interview procedure](references/interview.md) and [the evidence policy](references/evidence.md).
+1. Read [the interview procedure](references/interview.md), [the coverage framework](references/framework.md), and [the evidence policy](references/evidence.md).
 2. For an update, locate the existing personal directory using [generation's location rule](references/generation.md): explicit path, existing binding, then `~/.kitsune/workflow/`. Read its `README.md` and `maintenance.md` before proposing changes. Do not create a parallel profile.
-3. For initial setup, ask for a representative work directory and exclusions before asking detailed preference questions. If the user has no shareable directory, use a task description or selected samples. Directory access does not authorize unrelated history access.
-4. Inspect a bounded sample, propose a scenario list, and ask only about unresolved decisions. End the interview by showing coverage and explicitly asking for omitted scenarios, including work not visible in the directory.
+3. For initial setup, briefly establish the work scope and accept zero, one, or several reference sources. Record each source's purpose, reading boundary, and exclusions before detailed preference questions. Accept task descriptions or selected samples without a project. Sources can be added later; access to one does not authorize the others or unrelated history.
+4. Inspect bounded samples, then use the framework to propose concrete tasks and identify coverage gaps beyond the projects. For important tasks, develop a method draft and quality criteria using a walkthrough and relevant examples or contrasts. Resolve only real open decisions, respect delegated judgments, and finish by explicitly checking for omitted tasks, sources, and method or quality gaps.
 
 ## Turn evidence into a proposal
 
 5. Use [the authoring guide](assets/personal-workflow/authoring.md). Separate confirmed preferences, candidate inferences, one-task restrictions, and repository requirements. Do not copy repository requirements into personal defaults.
 6. Use [skill selection](references/skills.md). A preference does not need a skill. Recommend a small relevant set, including the option to add none. Do not install, execute third-party scripts, or change invocation restrictions merely to inspect a candidate.
-7. Present how the agent would behave, the evidence and remaining uncertainty, the selected skills, the proposed files, and any installation or binding changes. Reuse explicit approval of the same scope; do not self-approve inferred preferences.
+7. Present the proposed behavior, important methods and quality criteria, reviewed examples or contrasts, evidence and remaining uncertainty, selected skills, files, and any installation or binding changes. Reuse explicit approval of the same scope; do not self-approve inferred preferences or agent-proposed methods.
 
 ## Generate and check
 

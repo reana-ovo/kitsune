@@ -20,6 +20,21 @@ State the triggering condition, the exact conflicting part that yields, and the 
 
 Keep unconfirmed relationships and material unresolved conflicts in draft or evidence notes, not as operating instructions. Temporary task choices do not silently become permanent exceptions. The template entry's overlap-handling section must remain in the generated startup core, including when optional methods or examples are omitted.
 
+## Generate methods and quality criteria
+
+Use the reviewed task notes and [coverage criteria](framework.md#decide-what-is-covered), not only the list of decision preferences. Check that important methods and quality expectations are established, explicitly delegated, or visibly left open or deferred. Do not silently omit an unresolved method because `methods/` is optional, or fill the gap with generic instructions presented as the user's preference.
+
+Map the confirmed content into the existing files:
+
+- Put short cross-task requirements and their conditions in `preferences.md`.
+- Put useful repeatable procedures in `methods/` using [the method template](../assets/personal-workflow/methods/method.md). Related tasks may share a method; a simple requirement does not need its own file.
+- Preserve relevant judgment and quality contrasts in `examples.md` or beside the method. Label hypothetical examples and explain the decisive difference, not just a preferred answer.
+- Keep source roles, narrow pointers, proposed interpretations, sampling limits, and open or deferred dimensions in evidence or the approved setup draft, outside operating instructions.
+
+A method should state its applicability, inputs and intended result, executable steps with consequential judgment points, and signals for revising the approach. Its `quality_criteria` should identify observable properties of a good result and why they matter. Verification should state how those properties are checked, what remains uncertain, and when to stop or ask. "Research carefully" or "follow existing patterns" alone is not an adequate procedure for an important task.
+
+Retain the user's distinctions and explicitly delegated judgments. Do not promote an agent recommendation into a confirmed personal rule or require the user to approve ordinary factual implementation details. Include a clear reading condition in the personal index for every generated method. Do not copy the full interview framework into startup content or create a rule, file, or skill per dimension.
+
 ## Choose language by purpose
 
 Use English for reusable execution procedures and technical steps. Personal preferences, judgment examples, and wording samples should normally use the language the user can best review. Preserve exact terms, domain names, commands, and quoted expressions. A requested English working version is allowed, but confirm translations that change meaning and retain a short original quotation where needed.
@@ -60,6 +75,9 @@ Do not perform startup integration here. The daily entry checks it on activation
 - No unresolved placeholders or unconfirmed requirements in active files.
 - Core files, maintenance and authoring links resolve; optional links match actual files.
 - Desired reply language, scope, skill state, and missing capabilities are explicit.
+- Important tasks have reviewed methods and quality criteria or explicit delegation, with material gaps still visible rather than labeled fully covered.
+- Method steps explain how to work, quality criteria describe what to inspect, and verification explains how to obtain evidence. Method links and applicability conditions remain discoverable.
+- Source-specific contexts and permissions are not collapsed into one project's assumed defaults.
 - Maintenance decisions and overlap handling remain in the core that startup loading will include.
 - Relationship references resolve; confirmed exceptions are conditional and preserve non-conflicting requirements. Material unresolved conflicts are not silently activated.
 - Examples cover the default, the exception, and a near-miss where it does not apply; provenance and withheld checks are not silently injected.
