@@ -5,7 +5,7 @@
 ## 配置与维护方法
 
 - [pstack automate-me](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/automate-me/SKILL.md)：寻找已有个人模式、根据材料提取偏好、审阅更新。
-- [pstack reflect](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/reflect/SKILL.md)：区分可复用改进与单次问题，修改前提出具体建议。
+- [pstack reflect](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/reflect/SKILL.md)：区分可复用改进与单次问题。没有继承其逐次提案方式作为已授权日常维护的必经步骤。
 - [grilling](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md)：按决策依赖推进，事实先调查，给出建议。
 - [grill-with-docs](https://github.com/mattpocock/skills/blob/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/grill-with-docs/SKILL.md)：访谈过程中保存结果。其术语建模和 ADR 产物没有继承为个人工作流要求。
 - [Agent Skills 编写建议](https://agentskills.io/skill-creation/best-practices)：真实任务、按需加载、适量细节和执行反馈。
@@ -24,16 +24,22 @@
 ## 长期维护与优化
 
 - [ACE：Agentic Context Engineering](https://arxiv.org/html/2510.04618v3)：借鉴局部增量更新和去重，避免反复整份重写时丢失有效细节。其经验库仍可增长，不能据此保证固定数量的规则可以持续学习。
-- [GEPA：Reflective Prompt Evolution](https://arxiv.org/html/2507.19457v1)：借鉴依据执行反馈提出修改、区分修改用例与保留测试、比较候选版本。个人授权边界不能用其他任务的平均分改善来补偿。
+- [GEPA：Reflective Prompt Evolution，v2](https://arxiv.org/html/2507.19457v2)：借鉴从执行轨迹和具体反馈推导候选修改、比较候选、区分修改材料与验证材料。Kitsune 不采用其完整优化运行框架，也不以其他任务的平均分改善补偿个人授权边界的退步。
+- [AgentRx，Microsoft Research 官方介绍](https://www.microsoft.com/en-us/research/blog/systematic-debugging-for-ai-agents-introducing-the-agentrx-framework/)：借鉴系统化检查执行产物、定位失败与依据证据诊断的思路。记录错误或给原因贴标签不等于验证了原因；当前 agent 的语义判断仍需单独检查。
+- [Google SRE：Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)：借鉴以具体事件、成因和可执行改进组织复盘，而非仅归咎某个动作或追加禁令。它面向可靠性工程，不能直接证明个人工作流自主维护的效果。
+- [A-MEM：Agentic Memory for LLM Agents，v1](https://arxiv.org/html/2502.12110v1)：借鉴以关联表达记忆之间的关系，而非强制一条记录对应单一类别。Kitsune 的问题、发生、原因、尝试和检查采用多对多关联，但没有照搬其记忆系统或推导出自动归因可靠的结论。
 - [Memora：From Recall to Forgetting](https://aclanthology.org/2026.findings-acl.1337/)：借鉴对继续使用失效信息的检查，维护不只新增要求，也要清理旧要求、例子和启动副本。
 
-本轮阅读了 ACE、GEPA 的方法及主要实验部分，未完整核对附录；Memora 使用摘要及出版记录。没有复现实验，也没有验证这些方法对个人工作流的长期收益。维护流程中的诊断表、操作选择、授权与回滚边界是本项目的设计选择，不是论文已验证的统一算法。没有引入这些研究的运行框架、自动优化循环或记忆评分淘汰机制。
+GEPA v2、AgentRx 官方说明、Google SRE 和 A-MEM v1 是本轮已核实的原始来源；这里只引用其设计启发，不声称复现或证明 Kitsune 的效果。此前 ACE、GEPA 的阅读覆盖方法及主要实验部分而非全部附录，Memora 使用摘要及出版记录。没有运行新的付费模型评测，也没有验证这些方法对个人工作流的长期收益。
+
+分阶段检查、每次复核最多一组自动修复、无新证据不重复失败策略、针对性回滚、执行策略不可自行放宽，以及数量与更新时间联合清理，都是本项目根据目标作出的设计选择，不是这些来源已经验证的统一算法。默认 100 个问题、30 天闲置期没有研究最优性依据；不限制固定规则数量，也不引入以使用频率自动淘汰规则的机制。
 
 ## 文件发现与启动
 
 - [Agent Skills 接入说明](https://agentskills.io/integrate-skills)：技能发现、元数据、正文加载与宿主职责。
 - [Claude 技能文档](https://code.claude.com/docs/en/skills)：按需技能与手动调用配置。
 - [Claude 启动记忆文档](https://code.claude.com/docs/en/memory)：原生文件加载与导入。
+- [Claude hooks 文档](https://code.claude.com/docs/en/hooks)：宿主 command-hook 事件、输入输出和续行边界。程序触发不等于模型完成正确复核，启用需独立授权。
 - [Codex 技能文档](https://developers.openai.com/codex/skills/)：安装位置与技能调用控制，实际部署前核对当前版本。
 
 跨工具依靠共同的内容和能力检查，不依靠假定所有产品都实现某个厂商字段。原研究、讨论与完整来源保存在归档内的 `docs/`。

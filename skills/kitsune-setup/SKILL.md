@@ -21,12 +21,12 @@ The result is a user-owned directory of ordinary files, not a new agent runtime 
 
 5. Use [the authoring guide](assets/personal-workflow/authoring.md). Separate confirmed preferences, candidate inferences, one-task restrictions, and repository requirements. Do not copy repository requirements into personal defaults.
 6. Use [skill selection](references/skills.md). A preference does not need a skill. Recommend a small relevant set, including the option to add none. Do not install, execute third-party scripts, or change invocation restrictions merely to inspect a candidate.
-7. Present the proposed behavior, important methods and quality criteria, reviewed examples or contrasts, evidence and remaining uncertainty, selected skills, files, and any installation or binding changes. Reuse explicit approval of the same scope; do not self-approve inferred preferences or agent-proposed methods.
+7. Present the proposed behavior, important methods and quality criteria, reviewed examples or contrasts, evidence and remaining uncertainty, selected skills, files, and any installation or binding changes. Include the personal maintenance scope: enabled iteration in `maintenance.json`, private linked records in `.maintenance/`, bounded repair and recovery, and retention defaults. Establish this authority once rather than asking for approval of every later in-scope repair. Reuse explicit approval of the same scope; do not self-approve unsupported personal values or goals.
 
 ## Generate and check
 
 8. Follow [generation](references/generation.md) using [the personal directory templates](assets/personal-workflow/README.md). Preserve unrelated edits. All subsequent persistent changes use the generated `maintenance.md` and its authoring guide.
-9. Bind an installed `kitsune-mode` only when that write is in scope. The daily entry owns first-use startup integration; setup must not perform a second competing integration. Missing host capabilities are limitations, not permission to improvise settings.
+9. Bind an installed `kitsune-mode` only when that write is in scope. The daily entry owns first-use startup and maintenance-hook integration; setup must not perform a second competing integration. Package installation and personal configuration do not authorize host hooks, permissions, or new costs. Missing host capabilities are limitations, not permission to improvise settings.
 10. Check paths, active content, examples, and selected skill availability. Offer a scoped behavior test with its cost and effects before running it. Do not report static checks as model compliance or current-context reads as fresh-session startup evidence.
 
 Keep a resumable coverage and decision note in the user-approved draft location. On resume, verify existing files and decisions, then continue unresolved items. Do not reread all history or repeat the full interview.

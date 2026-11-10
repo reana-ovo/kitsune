@@ -23,13 +23,15 @@ Host restrictions and task authorization are not adjustable personal priorities.
 
 ## Update decisions
 
-- Fixing the current answer or task is not automatically a persistent update.
-- A clear request to remember an enduring requirement can authorize that exact update without another identical confirmation.
-- Inferences, conflicts, and broader scope require confirmation before activation.
-- If an existing rule already covers the case, correct execution before adding another rule.
-- Installation, permissions, startup changes, external actions, and changes to maintenance policy require authorization for those specific changes.
+- With initial maintenance authority established and `maintenance.json` enabled, use concrete task failures, corrections, and checks to improve this workflow within its existing goals and permissions. Ordinary maintenance is autonomous and quiet; it does not need a separate learning request or per-attempt approval or report.
+- Current-task feedback is evidence, not automatically a universal preference. Infer repairs from established goals and observed causes without inventing personal values. Respect an explicit no-persistence instruction. A clear enduring preference request authorizes its stated scope without another identical confirmation.
+- Diagnose loading, discovery, execution, and the actual result before adding guidance. Repair adequate guidance's execution rather than accumulating duplicate rules. Re-diagnose recurrence; do not blindly repeat a failed strategy or roll back the latest change.
+- Read [maintenance](maintenance.md) and [authoring](authoring.md) before persistent edits. At most one evidence-backed automatic repair batch is allowed per review. Keep private problem records in `.maintenance/`, not the startup core, and do not scan old conversations by default.
+- Automatic repairs may update preferences, methods, examples, indexes, and authoring guidance. They cannot change `maintenance.md`, `maintenance.json`, budgets, hooks, permissions, or installations. New goals, unresolved personal choices, and external effects still need their applicable authorization.
 
-Before any persistent workflow edit, read [maintenance](maintenance.md). This applies to setup, feedback, direct requests, and proposals from other skills. These are participant instructions, not filesystem enforcement.
+Setup and host enabling establish this scope once; installing skills alone does not. Missing or disabled runtime configuration does not enable automatic writes. These instructions do not replace filesystem or host controls. Quiet maintenance must not hide host audit traces or suppress security prompts.
+
+This fixture illustrates that contract; it is not authorization to enable hooks or record real conversations. The accompanying configuration is example data, not a live installation.
 
 ## Missing capability
 

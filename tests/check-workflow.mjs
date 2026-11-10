@@ -99,11 +99,19 @@ for (const name of ['maintenance.md', 'authoring.md']) {
   equal(read(path.join(sampleRoot, name)), read(path.join(templateRoot, name)), `Sample diverged from shared guide: ${name}`);
 }
 const maintenanceGuide = read(path.join(templateRoot, 'maintenance.md'));
-for (const section of ['Diagnose before changing guidance', 'Choose the smallest change', 'Plan before-and-after checks', 'Accept, revise, or roll back']) {
+for (const name of ['maintenance.json']) {
+  const config = JSON.parse(read(path.join(templateRoot, name)));
+  equal(config, { version: 1, enabled: true, maxIssues: 100, minIdleDays: 30 }, 'Maintenance default configuration');
+  equal(read(path.join(sampleRoot, name)), read(path.join(templateRoot, name)), 'Sample configuration matches setup template');
+}
+for (const file of ['scripts/maintenance-store.mjs', 'scripts/maintenance.mjs', 'scripts/claude-maintenance.mjs', 'references/maintenance.md']) {
+  check(existsSync(path.join(root, 'skills/kitsune-mode', file)), `Missing maintenance package file: ${file}`);
+}
+for (const section of ['Authority and quiet operation', 'Diagnose in stages', 'Keep linked problem records', 'Choose a cause-supported change', 'Plan before-and-after checks', 'Retain, revise, or recover', 'Bound retained data']) {
   check(maintenanceGuide.includes(`## ${section}`), `Maintenance guide lacks section: ${section}`);
 }
 const authoringGuide = read(path.join(templateRoot, 'authoring.md'));
-check(authoringGuide.includes('](maintenance.md#choose-the-smallest-change)'), 'Authoring does not reference maintenance change selection');
+check(authoringGuide.includes('](maintenance.md#choose-a-cause-supported-change)'), 'Authoring does not reference maintenance change selection');
 check(authoringGuide.includes('](maintenance.md#plan-before-and-after-checks)'), 'Authoring does not reference comparison checks');
 check(read(path.join(sampleRoot, 'README.md')).includes('maintenance.md'), 'Startup core lacks maintenance entry');
 check(read(path.join(sampleRoot, 'preferences.md')).includes('Reply language: Simplified Chinese'), 'Sample reply language missing');

@@ -14,4 +14,4 @@ Covered scenarios: comparing approaches, explaining results, and learning explan
 
 The comparison task has a concrete goal, a reviewed method, quality criteria illustrated by a contrast, and verification and stopping conditions in `methods/compare.md`. Its scope and collaboration boundary come from P2 and the instruction that a recommendation does not authorize execution. These are synthetic coverage notes, not a claim that an actual interview or behavior test occurred.
 
-This file is not startup guidance. No candidate inference is active. Tests using new situations live outside the routinely loaded profile.
+This file is setup provenance, not startup guidance or a runtime issue log. No unconfirmed personal-value inference is active. Evidence-backed method repairs would use the established fictional goals and the maintenance procedure, not turn every correction into a new preference. Private problem workspaces, linked causes and attempts, checks, and retention belong in `.maintenance/`; this fixture contains no actual session history. Tests using new situations live outside the routinely loaded profile.

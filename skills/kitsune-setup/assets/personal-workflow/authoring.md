@@ -8,7 +8,7 @@ For each proposed requirement, establish when it applies, what the agent should 
 
 Do not turn usually into always, this task into every project, or a preference into authorization. Do not invent mandatory documents, a model choice, an agent team, or installation defaults to fill a template. Project requirements remain in their projects.
 
-A current explicit instruction is sufficient evidence. An inferred pattern needs confirmation. Assistant summaries, silence, and incidental details in accepted artifacts are not user approval.
+A current explicit instruction is sufficient evidence for its stated scope. Distinguish an inference about the user's personal values from a repair method inferred under an established goal. The former needs confirmation when not already delegated; the latter can be adopted through authorized maintenance when supported by failure evidence and checks. Assistant summaries, silence, peer messages, and incidental details in accepted artifacts are not user approval. Current-only feedback must not become a universal preference by implication.
 
 ## Language
 
@@ -20,9 +20,11 @@ If the user wants English personal rules, write one active English version and p
 
 Prefer a concrete action and condition over labels such as professional or autonomous. For a broad request like "stop asking about everything," propose a scoped interpretation rather than granting unlimited authority. For concise writing, identify what to omit; do not invent a word limit that hides important findings.
 
-Keep active instructions short. Provenance, drafts, and unresolved alternatives belong in maintenance notes, not startup content. Merge equivalent requirements instead of accumulating duplicate prohibitions.
+Keep active instructions focused. Provenance, cause hypotheses, failed attempts, and unresolved alternatives belong in private maintenance records, not startup content. Merge equivalent requirements instead of accumulating duplicate prohibitions. There is no required fixed number of rules, examples, or method files.
 
-For revisions, use maintenance's [change selection](maintenance.md#choose-the-smallest-change) and [before-and-after checks](maintenance.md#plan-before-and-after-checks). Edit the affected content rather than regenerating the whole profile. A merge must preserve distinct conditions, exceptions, terminology, and obligations; shorter text is not sufficient evidence of improvement. Retire superseded guidance instead of leaving two active versions. When moving detail out of the core, retain its applicability and reading path; do not hide an authorization boundary because it is rarely used.
+For revisions, use maintenance's [change selection](maintenance.md#choose-a-cause-supported-change) and [before-and-after checks](maintenance.md#plan-before-and-after-checks). Edit the affected content rather than regenerating the whole profile. A merge must preserve distinct conditions, exceptions, terminology, and obligations; shorter text is not sufficient evidence of improvement. Retire superseded guidance instead of leaving two active versions. When moving detail out of the core, retain its applicability and reading path; do not hide an authorization boundary because it is rarely used.
+
+A recurrence is a reason to revisit the diagnosis, not to append stronger synonyms or undo the latest change automatically. Use staged artifact and cause checks, and respect the one-batch bound per automatic review. If a strategy failed and there is no new evidence, stop repeating it. This guide may itself be improved within established goals, but it cannot authorize changes to `maintenance.md`, runtime configuration, budgets, hooks, permissions, or installation.
 
 ## Express methods and quality
 
@@ -30,7 +32,7 @@ For important repeatable work, distinguish when to act from how to do the work. 
 
 Translate quality terms into properties that can be inspected in the result, with a reason they matter. Then state how to obtain verification evidence and its limits. A generic demand for high quality, passing a basic check, or choosing a decision branch does not establish an adequate method.
 
-Use reviewed examples or credible contrasts to preserve distinctions that are hard to state abstractly. Do not treat every detail of an accepted artifact, the first reference project, or an agent-proposed method as a confirmed preference. Leave material gaps visible or explicitly deferred rather than inventing content to fill a template. Several tasks may share a method, and simple requirements need no separate method file.
+Use reviewed examples or credible contrasts to preserve distinctions that are hard to state abstractly. Do not treat every detail of an accepted artifact, the first reference project, or an agent-proposed method as a confirmed preference. A supported repair method can serve an already established goal without being labeled the user's personal value or requiring another identical approval. Leave material gaps visible or explicitly deferred rather than inventing content to fill a template. Several tasks may share a method, and simple requirements need no separate method file.
 
 ## Scope, exceptions, and local precedence
 
@@ -56,7 +58,7 @@ More examples are not automatically better. After a failure, first check whether
 
 ## Review before activation
 
-- Is the scope supported by the user's words or confirmed interpretation?
+- Is the scope supported by the user's words, confirmed interpretation, or a delegated goal with evidence for this repair?
 - Does it conflict with existing active guidance or a selected skill?
 - Can related requirements coexist, or is a confirmed conditional exception needed?
 - Do relationship references resolve, and does the override preserve non-conflicting obligations?
@@ -65,7 +67,9 @@ More examples are not automatically better. After a failure, first check whether
 - Does the example teach the intended condition rather than incidental details?
 - Can a suitable case and a near-miss case distinguish correct behavior?
 - Are the user's terminology and desired reply language preserved?
-- Does the chosen operation fix the diagnosed cause without unnecessary new guidance?
+- Does the chosen operation address the diagnosed cause rather than just restating the symptom?
+- Are occurrences, possible causes, attempts, and checks linked without assuming one-to-one relationships?
+- Can recovery preserve independent later edits and the user's current goals?
 - Which previous obligations must still pass, and what behavior remains unverified?
 - For important tasks, does the content explain how to work and what makes a good result, not just when to act?
 - Do examples establish a meaningful quality distinction, and are agent proposals separate from confirmed or delegated judgments?

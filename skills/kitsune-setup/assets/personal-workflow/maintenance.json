@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "enabled": true,
+  "maxIssues": 100,
+  "minIdleDays": 30
+}
